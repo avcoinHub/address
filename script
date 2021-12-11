@@ -1,0 +1,47 @@
+ps -e | grep [s]sh-agent
+
+ssh-agent /bin/bash
+ssh-add ~/.ssh/id_anda
+ssh-add -l
+cat ~/.ssh/id_anda.pub
+ssh -T git@github.com
+
+https://www.petanikode.com/git-remote/
+
+git remote add
+
+git remote -v
+git remote rename github kantor
+git remote remove github
+git push github master
+
+git add .
+git commit -m "menambahkan beberapa revisi"
+
+git diff index.html
+
+git add index.html
+git commit -m "mengubah judul dan teks di body"
+git push github master
+
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+echo "# address" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:avcoinHub/address.git
+git push -u origin main
